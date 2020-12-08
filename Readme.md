@@ -57,7 +57,7 @@ Now is the fun part. Locate your NAND memory. It is beside the SoC (check the pi
 
 You'll need to provide 3.3V (for example from DBGU VCC) to the **CE#** pin (see the picture below) at the moment you power on the device. Don't forget to remove it a few seconds after power on.
 
-![NAND close-up](./pictures/DebugIO.jpg "NAND close-up")
+![NAND close-up](./pictures/NAND_CE.jpg "NAND close-up")
 
 Don't worry if no LED is powered on after the manipulation. They're not expected to (in fact, if LEDs are powering up, you missed and need to power cycle the device).
 
