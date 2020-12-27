@@ -89,7 +89,9 @@ Go to the root folder and rename `K06dropbear` to `S06dropbear` in `rc2.S` to `r
 
 Then, go to the `security` folder (not the one in etc) and replace `authorized_keys` by a SSH public key you generated (be sure to have the associated private key in your own `~/.ssh/` folder). Do the same in `persistent/root/root/.ssh` ([How to generate a SSH key](https://www.ssh.com/ssh/keygen/)). The last step may not be necessary but just let us stay on the safe side.
 
-_(optional and not really tested yet)_ Generate a root certificate ([How to do it](https://gist.github.com/Soarez/9688998)), then a client certificate and key pair. Do not password-protect the private key. The certificate's CN, OU, C, O fields should be your device serial (found in `security/hostname`), Overkiz Root CA, FR, Overkiz (it might work with anything). You may want to use same ciphers as the ones you have in your existing certificates (key length and certificate signature algorithm).
+_(optional)_ Generate a root certificate ([Details on how this could be done](https://gist.github.com/Soarez/9688998)), then a client certificate and key pair. Do not password-protect the private key. The certificate's CN, OU, C, O fields should be your device serial (found in `security/hostname`), Overkiz Root CA, FR, Overkiz (it might work with anything). You may want to use same ciphers as the ones you have in your existing certificates (key length and certificate signature algorithm) but if they are RSA 1024 just know that RSA 2048 works and will cause you less trouble.
+
+A script available [here](./scripts/mitm-certificate) will make the process easier. Another tutorial available [here](./SSLMitm.md) to help you to set up a lab allowing you to effectively Man-In-The-Middle the communication between the TaHoma and Overkiz's servers.
 
 The certificate chain should be similar as the following: Overkiz Root CA -> Server certificate (for later use), Overkiz Client Root CA -> client certificate (for the TaHoma).
 
