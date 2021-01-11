@@ -21,6 +21,11 @@ openssl genrsa -passout pass:password -out client.key $1
 openssl req -new -keyform PEM -passin pass:password -key client.key -out client.req -config client.conf -subj "/O=Overkiz/OU=Gateway Device/CN=$2"
 openssl rsa -in client.key -passin pass:password -out client.key
 openssl x509 -req -in client.req -CA client-ca.pem -CAkey client-ca.key -set_serial 100 -days 1460 -extfile clientext.conf -outform PEM -out client.pem
+echo ""
+echo ""
+openssl x509 -text -noout -in client.pem
+echo ""
+echo ""
 echo "Cleaning..."
 rm client.req wildcard.req
 echo "You certificate files are as following:"
@@ -29,3 +34,4 @@ echo "* Server CA: certificate authority to sign the server certificate. The cer
 echo "* Client CA: certificate authority to sign the client certificates. The certificate should be provided to the web server as trusted certificate for client authentication"
 echo "* Wildcard certificate. The certificate and its private key should be configured on the server. The same certificate can be used for multiple subdomains"
 echo "* Client certificate. The certificate and the private key should be specified in /etc/security on the client side"
+echo "If you want to keep the hostname clean in your TaHoma, you should copy the full certificate information above (from Certificate: to the end of the signature) and edit it to remove the spaces aroud the '=' sign in CN = $2"
