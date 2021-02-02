@@ -1,6 +1,6 @@
 # Setting up a Man-In-The-Middle connection with the TaHoma
 
-When following the steps described in [Readme.md](./Readme.md), you can edit the firmware to configure it for MITM or custom servers.
+When following the steps described in [Jailbreak.md](./Jailbreak.md), you can edit the firmware to configure it for MITM or custom servers.
 
 To redirect the traffic from the TaHoma you have 2 options:
 
@@ -14,7 +14,7 @@ You'll find plenty of tutorials for both approaches. In both cases you'll need t
 
 Once your TaHoma is configured to call custom IPs, you'll need to provide it with custom certificates to make sure that it is able to communicate with your custom server.
 
-Check the script located in [scripts/mitm-certificate/](./scripts/mitm-certificate/). It will generate all the needed certificates and keys to build a complete chain of trust.
+Check the script located in [scripts/mitm-certificate/](../scripts/mitm-certificate/). It will generate all the needed certificates and keys to build a complete chain of trust.
 
 On the TaHoma side you'll need to replace, in the security volume, the client certificate and key files aswell as the server CA certificate by the certificates generated. Make sure to keep the same names.
 
