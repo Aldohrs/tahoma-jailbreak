@@ -11,15 +11,15 @@ See https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/at91-kizbox2
 * RAM: 2Gb (256Mo) DDR2
 * Ethernet 100Mbps using a KSZ8081 controller
 * 2 RGB LEDs:
- * pwm:blue:user: on PWM 0 2
- * pwm:green:user: on PWM 0 1
- * pwm:red:user: on PWM 0 0
+  * pwm:blue:user: on PWM 0 2
+  * pwm:green:user: on PWM 0 1
+  * pwm:red:user: on PWM 0 0
 * 3 buttons on GPIOs:
- * prog (aka CFG): PE27
- * reset (aka RST): PE29
- * user (the capacitive button hidden under the center of the TaHoma): PE31
+  * prog (aka CFG): PE27
+  * reset (aka RST): PE29
+  * user (the capacitive button hidden under the center of the TaHoma): PE31
 * USB 2.0 controller and port (USB1)
- * The USB port 2 is also enabled. It has not been located yet but is suspected to be on the connectors allowing to add the Serenity base as the latter provides a USB hub.
+  * The USB port 2 is also enabled. It has not been located yet but is suspected to be on the connectors allowing to add the Serenity base as the latter provides a USB hub.
 * ACT8865 PMIC
 
 ## Other architecture information

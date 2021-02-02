@@ -40,8 +40,8 @@ Most of the applications are organized the following way:
 * `bin`: contains the entrypoint executable (that may be in fact plain uncompiled lua)
 * `etc`: contains configuration and runtime data (for exemple node database for protocols)
 * `lib`: contains the luajit code for the application
- * This folder is configured as namespaces and class names, it will alway contain the `Overkiz/HomeAutomation` path
- * The `Protocol` sub namespace contains the main code for the application
- * The `Shared` sub namespace contains common code for several protocols if the application handles several protocols
- * The `Utils` sub namespace... Well every project big enough contains a Utils folder
- * The `Bus` namespace refers to everything linked to the dbus IPC
+  * This folder is configured as namespaces and class names, it will alway contain the `Overkiz/HomeAutomation` path
+  * The `Protocol` sub namespace contains the main code for the application
+  * The `Shared` sub namespace contains common code for several protocols if the application handles several protocols
+  * The `Utils` sub namespace... Well every project big enough contains a Utils folder
+  * The `Bus` namespace refers to everything linked to the dbus IPC
