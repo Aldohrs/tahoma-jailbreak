@@ -18,6 +18,14 @@ Check the script located in [scripts/mitm-certificate/](./scripts/mitm-certifica
 
 On the TaHoma side you'll need to replace, in the security volume, the client certificate and key files aswell as the server CA certificate by the certificates generated. Make sure to keep the same names.
 
+Note that if you want to preserve the hostname, you will have to modify the `client.crt` to include the certificate as text (from Certificate: to the end of the signature) and edit it to remove the spaces aroud the '=' sign in `CN = XXXX-XXXX-XXXX`.
+
+To get the certificate as text, issue the following command:
+
+```
+openssl x509 -text -in client.crt
+```
+
 On the other side, you'll need to set up a nginx server with the server CA certificate, the client CA certificate and the wildcard certificate and key. Here is an example of configuration file for nginx that allows the request to be forwarded to an HTTP application that runs locally:
 
 ```
