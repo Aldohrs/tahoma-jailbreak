@@ -19,6 +19,8 @@ To jailbreak the Somfy TaHoma, just follow [this link](./doc/Jailbreak.md)
 ## Documentation
 
 * [TaHoma hardware specification and architecture](./doc/TaHomaHW.md)
+  * [Access to the hardware from Linux](./doc/AccessHWFromOS.md)
+  * [Low level Linux and custom OS](./doc/Linux.md)
 * [KizOS boot process](./doc/KizOSBootProcess.md)
 * [Firmware layout](./doc/FWLayout.md)
 * [Somfy applications](./doc/SomfyApps.md)
